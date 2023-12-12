@@ -6,4 +6,4 @@ Weather app using thard party api.<br>
 <img loading="lazy" src="./src/images/weather-app-1.png" alt="Search City Name" />
 
 
-![Weather Report](https://github.com/Rdinesh1667/weather-app/blob/master/src/images/weather-app-2.png)
+![Weather Report](https://raw.githubusercontent.com/Rdinesh1667/weather-app/blob/master/src/images/weather-app-2.png)
