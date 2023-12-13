@@ -6,11 +6,8 @@
 
 body {
   margin: 0;
-  font-family: 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Roboto, "Ubuntu", Arial, sans-serif;
+  background-color: black;
 }
 
 p {
@@ -45,7 +42,6 @@ h1 {
 
 .container {
   max-width: 700px;
-
   margin: auto;
   padding: 0 1rem;
   position: relative;
@@ -74,6 +70,7 @@ h1 {
 
 .app .description {
   position: relative;
+  font-size: 1.5rem;
   right: -90%;
   transform-origin: 0 0;
   transform: rotate(269deg);
@@ -169,5 +166,13 @@ h1 {
   padding: 10px;
   right: 0px;
   bottom: 0px;
-  text-align: center;
 }
+
+.unit-dropdown {
+  position: fixed;
+  top: 1rem;
+}
+
+
+
+
