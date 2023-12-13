@@ -13,7 +13,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
 
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${API_KEY}&units=imperial`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${API_KEY}&units=metric`;
 
   const searchLocation = (event) => {
     if (event.key === 'Enter') {
@@ -67,6 +67,9 @@ function App() {
           placeholder="Search Location"
           type="text" />
       </div>
+      <div className="date">
+        <p> {new Date().toLocaleString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</p>
+      </div>
       {data ?
         <div className="container">
           <div className="top">
@@ -74,7 +77,7 @@ function App() {
               <p>{data.name}</p>
             </div>
             <div className="temp">
-              <h1>{data.main.temp.toFixed()}°F</h1>
+              <h1>{data.main.temp.toFixed()}°C</h1>
               <div className="icon">
                 <img src={`https://openweathermap.org/img/wn/${data.weather[0].icon}.png`} alt="Weather Icon" />
               </div>
@@ -86,7 +89,7 @@ function App() {
           </div>
           <div className="bottom">
             <div className="feels">
-              <p className="bold">{data.main.feels_like.toFixed()}°F</p>
+              <p className="bold">{data.main.feels_like.toFixed()}°C</p>
               <p>Feels Like</p>
             </div>
             <div className="humidity">
@@ -94,7 +97,7 @@ function App() {
               <p>Humidity</p>
             </div>
             <div className="temp_max">
-              <p className="bold">{data.main.temp_max.toFixed()}°F</p>
+              <p className="bold">{data.main.temp_max.toFixed()}°C</p>
               <p>Max Temp</p>
             </div>
             <div className="wind">
@@ -105,7 +108,7 @@ function App() {
         </div>
         : null}
       <footer className="footer">
-        <summery>&copy; {new Date().getFullYear()} Weather App API Dmeo. All rights reserved.</summery>
+        <h4>&copy; {new Date().getFullYear()} . All rights reserved.</h4>
       </footer>
     </div>
   );
