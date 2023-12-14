@@ -27,6 +27,9 @@ function App() {
     { value: 'imperial', label: 'Fahrenheit (°F)' },
   ];
 
+  // NOTE : Fatch data from OpenWeatherMap third party API.Constrected request url with (location, api key,unit).
+  // NOTE : For more about Api EndPoint and Methods see documentation (https://openweathermap.org/api)
+  
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${API_KEY}&units=${unit}`;
 
   const searchLocation = (event) => {
